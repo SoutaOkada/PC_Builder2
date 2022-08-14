@@ -1,24 +1,16 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# PC Builder2
 
-Things you may want to cover:
+## サイト概要
+自作PCのパーツ購入のために、パーツ名と金額を入力することでパーツ名、パーツごとの金額と
+全体の合計金額を表示するサイトです。他のユーザーが作った一覧も新着順で閲覧することができます。また、一覧ごとのIDを利用することで、過去に作成したリストも閲覧することができます。
 
-* Ruby version
+### サイトテーマ
+自作PCのための買い物メモアプリ
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9

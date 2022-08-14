@@ -1,2 +1,82 @@
-<h1>Pcs#show</h1>
-<p>Find me in app/views/pcs/show.html.erb</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-9">
+      <table class="table table-sm table-dark table-hover table-bordered table-striped">
+        <tr>
+          <th style="width: 15%"></th>
+          <th style="width: 65%">メーカー・型番</th>
+          <th style="width: 20%">価格</th>
+        </tr>
+        <tr>
+          <td>CPU</td>
+          <td><%= @pc.cpu %></td>
+          <td><%= @pc.cpu_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>CPUクーラー</td>
+          <td><%= @pc.cpu_cooler %></td>
+          <td><%= @pc.cpu_cooler_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>メモリー</td>
+          <td><%= @pc.memory %></td>
+          <td><%= @pc.memory_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>ビデオカード</td>
+          <td><%= @pc.videocard %></td>
+          <td><%= @pc.videocard_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>ストレージ</td>
+          <td><%= @pc.storage %></td>
+          <td><%= @pc.storage_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>ドライブ</td>
+          <td><%= @pc.drive %></td>
+          <td><%= @pc.drive_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>ケース</td>
+          <td><%= @pc.case %></td>
+          <td><%= @pc.case_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>マザーボード</td>
+          <td><%= @pc.motherboard %></td>
+          <td><%= @pc.motherboard_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>電源</td>
+          <td><%= @pc.power %></td>
+          <td><%= @pc.power_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>OS</td>
+          <td><%= @pc.system %></td>
+          <td><%= @pc.system_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>冷却ファン</td>
+          <td><%= @pc.fan %></td>
+          <td><%= @pc.fan_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>その他</td>
+          <td><%= @pc.other %></td>
+          <td><%= @pc.other_price.to_s(:delimited) %></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="col-3">
+      <table class="table table-dark table-bordered">
+        <tr>
+          <th>合計金額</th>
+          <td><%= @pc.total_price.to_s(:delimited) %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

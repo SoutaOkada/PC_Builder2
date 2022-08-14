@@ -1,5 +1,6 @@
 class PcsController < ApplicationController
   def new
+    @pc = Pc.new
   end
 
   def create

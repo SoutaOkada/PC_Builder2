@@ -9,62 +9,62 @@
         </tr>
         <tr>
           <td>CPU</td>
-          <td><%= @pc.cpu %></td>
+          <td><%= simple_format(h(@pc.cpu)) %></td>
           <td><%= @pc.cpu_price.to_s(:delimited) %></td>
         </tr>
         <tr>
           <td>CPUクーラー</td>
-          <td><%= @pc.cpu_cooler %></td>
+          <td><%= simple_format(h(@pc.cpu_cooler)) %></td>
           <td><%= @pc.cpu_cooler_price.to_s(:delimited) %></td>
         </tr>
         <tr>
           <td>メモリー</td>
-          <td><%= @pc.memory %></td>
+          <td><%= simple_format(h(@pc.memory)) %></td>
           <td><%= @pc.memory_price.to_s(:delimited) %></td>
         </tr>
         <tr>
           <td>ビデオカード</td>
-          <td><%= @pc.videocard %></td>
+          <td><%= simple_format(h(@pc.videocard)) %></td>
           <td><%= @pc.videocard_price.to_s(:delimited) %></td>
         </tr>
         <tr>
           <td>ストレージ</td>
-          <td><%= @pc.storage %></td>
+          <td><%= simple_format(h(@pc.storage)) %></td>
           <td><%= @pc.storage_price.to_s(:delimited) %></td>
         </tr>
         <tr>
           <td>ドライブ</td>
-          <td><%= @pc.drive %></td>
+          <td><%= simple_format(h(@pc.drive)) %></td>
           <td><%= @pc.drive_price.to_s(:delimited) %></td>
         </tr>
         <tr>
           <td>ケース</td>
-          <td><%= @pc.case %></td>
+          <td><%= simple_format(h(@pc.case)) %></td>
           <td><%= @pc.case_price.to_s(:delimited) %></td>
         </tr>
         <tr>
           <td>マザーボード</td>
-          <td><%= @pc.motherboard %></td>
+          <td><%= simple_format(h(@pc.motherboard)) %></td>
           <td><%= @pc.motherboard_price.to_s(:delimited) %></td>
         </tr>
         <tr>
           <td>電源</td>
-          <td><%= @pc.power %></td>
+          <td><%= simple_format(h(@pc.power)) %></td>
           <td><%= @pc.power_price.to_s(:delimited) %></td>
         </tr>
         <tr>
           <td>OS</td>
-          <td><%= @pc.system %></td>
+          <td><%= simple_format(h(@pc.system)) %></td>
           <td><%= @pc.system_price.to_s(:delimited) %></td>
         </tr>
         <tr>
           <td>冷却ファン</td>
-          <td><%= @pc.fan %></td>
+          <td><%= simple_format(h(@pc.fan)) %></td>
           <td><%= @pc.fan_price.to_s(:delimited) %></td>
         </tr>
         <tr>
           <td>その他</td>
-          <td><%= @pc.other %></td>
+          <td><%= simple_format(h(@pc.other)) %></td>
           <td><%= @pc.other_price.to_s(:delimited) %></td>
         </tr>
       </table>

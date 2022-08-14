@@ -6,11 +6,21 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style="background-color: slategray">
+    <header class="container-fluid", style="background-color: tomato">
+      <div class="row">
+        <div calss="col-4">
+          <h1><%= link_to "PC Builder", root_path, style: "color: white" %></h1>
+        </div>
+        <div class="col-4">
+          <p style="margin-top: 15px"><%= link_to "新着", pcs_path, class: "btn btn-dark btn-sm" %></p>
+        </div>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>

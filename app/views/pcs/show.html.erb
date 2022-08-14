@@ -1,0 +1,86 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-9">
+      <table class="table table-sm table-dark table-hover table-bordered table-striped">
+        <tr>
+          <th style="width: 15%"></th>
+          <th style="width: 65%">メーカー・型番</th>
+          <th style="width: 20%">価格</th>
+        </tr>
+        <tr>
+          <td>CPU</td>
+          <td><%= simple_format(h(@pc.cpu)) %></td>
+          <td><%= @pc.cpu_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>CPUクーラー</td>
+          <td><%= simple_format(h(@pc.cpu_cooler)) %></td>
+          <td><%= @pc.cpu_cooler_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>メモリー</td>
+          <td><%= simple_format(h(@pc.memory)) %></td>
+          <td><%= @pc.memory_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>ビデオカード</td>
+          <td><%= simple_format(h(@pc.videocard)) %></td>
+          <td><%= @pc.videocard_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>ストレージ</td>
+          <td><%= simple_format(h(@pc.storage)) %></td>
+          <td><%= @pc.storage_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>ドライブ</td>
+          <td><%= simple_format(h(@pc.drive)) %></td>
+          <td><%= @pc.drive_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>ケース</td>
+          <td><%= simple_format(h(@pc.case)) %></td>
+          <td><%= @pc.case_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>マザーボード</td>
+          <td><%= simple_format(h(@pc.motherboard)) %></td>
+          <td><%= @pc.motherboard_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>電源</td>
+          <td><%= simple_format(h(@pc.power)) %></td>
+          <td><%= @pc.power_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>OS</td>
+          <td><%= simple_format(h(@pc.system)) %></td>
+          <td><%= @pc.system_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>冷却ファン</td>
+          <td><%= simple_format(h(@pc.fan)) %></td>
+          <td><%= @pc.fan_price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <td>その他</td>
+          <td><%= simple_format(h(@pc.other)) %></td>
+          <td><%= @pc.other_price.to_s(:delimited) %></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="col-3">
+      <table class="table table-dark table-bordered", style="margin-top: 20px">
+        <tr>
+          <th>ID</th>
+          <td><%= @pc.id %></td>
+        </tr>
+        <tr>
+          <th>合計金額</th>
+          <td><%= @pc.total_price.to_s(:delimited) %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

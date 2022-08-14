@@ -1,0 +1,80 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <%= form_with model: @pc do |f| %>
+      <table class="table table-sm table-dark table-hover">
+        <tr>
+          <th style="width: 15%"></th>
+          <th style="width: 65%">メーカー・型番</th>
+          <th style="width: 20%">価格</th>
+        </tr>
+        <tr>
+          <td>CPU</td>
+          <td><%= f.text_area :cpu, style: "width: 100%" %></td>
+          <td><%= f.number_field :cpu_price, style: "width: 100%" %></td>
+        </tr>
+        <tr>
+          <td>CPUクーラー</td>
+          <td><%= f.text_area :cpu_cooler, style: "width: 100%" %></td>
+          <td><%= f.number_field :cpu_cooler_price, style: "width: 100%" %></td>
+        </tr>
+        <tr>
+          <td>メモリー</td>
+          <td><%= f.text_area :memory, style: "width: 100%" %></td>
+          <td><%= f.number_field :memory_price, style: "width: 100%" %></td>
+        </tr>
+        <tr>
+          <td>ビデオカード</td>
+          <td><%= f.text_area :videocard, style: "width: 100%" %></td>
+          <td><%= f.number_field :videocard_price, style: "width: 100%" %></td>
+        </tr>
+        <tr>
+          <td>ストレージ</td>
+          <td><%= f.text_area :storage, style: "width: 100%" %></td>
+          <td><%= f.number_field :storage_price, style: "width: 100%" %></td>
+        </tr>
+        <tr>
+          <td>ドライブ</td>
+          <td><%= f.text_area :drive, style: "width: 100%" %></td>
+          <td><%= f.number_field :drive_price, style: "width: 100%" %></td>
+        </tr>
+        <tr>
+          <td>ケース</td>
+          <td><%= f.text_area :case, style: "width: 100%" %></td>
+          <td><%= f.number_field :case_price, style: "width: 100%" %></td>
+        </tr>
+        <tr>
+          <td>マザーボード</td>
+          <td><%= f.text_area :motherboard, style: "width: 100%" %></td>
+          <td><%= f.number_field :motherboard_price, style: "width: 100%" %></td>
+        </tr>
+        <tr>
+          <td>電源</td>
+          <td><%= f.text_area :power, style: "width: 100%" %></td>
+          <td><%= f.number_field :power_price, style: "width: 100%" %></td>
+        </tr>
+        <tr>
+          <td>OS</td>
+          <td><%= f.text_area :system, style: "width: 100%" %></td>
+          <td><%= f.number_field :system_price, style: "width: 100%" %></td>
+        </tr>
+        <tr>
+          <td>冷却ファン</td>
+          <td><%= f.text_area :fan, style: "width: 100%" %></td>
+          <td><%= f.number_field :fan_price, style: "width: 100%" %></td>
+        </tr>
+        <tr>
+          <td>その他</td>
+          <td><%= f.text_area :other, style: "width: 100%" %></td>
+          <td><%= f.number_field :other_price, style: "width: 100%" %></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><%= f.submit '以上で決定する', class: "btn btn-danger btn-block" %></td>
+          <td></td>
+        </tr>
+      </table>
+      <% end %>
+    </div>
+  </div>
+</div>

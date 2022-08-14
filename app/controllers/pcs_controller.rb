@@ -22,6 +22,7 @@ class PcsController < ApplicationController
   end
 
   def index
+    @pcs = Pc.order(id: :DESC).limit(30)
   end
 
   def show

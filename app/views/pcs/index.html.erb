@@ -1,2 +1,27 @@
-<h1>Pcs#index</h1>
-<p>Find me in app/views/pcs/index.html.erb</p>
+<h2>新着PC</h2>
+
+<div>
+  <table class="table table-sm table-dark table-hover table-bordered table-striped">
+    <tr>
+      <th>ID</th>
+      <th>CPU</th>
+      <th>メモリー</th>
+      <th>ストレージ</th>
+      <th>ビデオカード</th>
+      <th>合計金額</th>
+      <th></th>
+    </tr>
+
+    <% @pcs.each do |pc| %>
+      <tr>
+        <td><%= pc.id %></td>
+        <td><%= simple_format(h(pc.cpu.truncate(20))) %></td>
+        <td><%= simple_format(h(pc.memory.truncate(20))) %></td>
+        <td><%= simple_format(h(pc.storage.truncate(20))) %></td>
+        <td><%= simple_format(h(pc.videocard.truncate(20))) %></td>
+        <td><%= pc.total_price.to_s(:delimited) %></td>
+        <td><%= link_to '詳細', pc_path(pc.id), class: "btn btn-warning" %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
